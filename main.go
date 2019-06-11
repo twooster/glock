@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"math/rand"
 	"net/http"
 	"os"
 	"os/signal"
@@ -17,11 +16,10 @@ import (
 var tableName = "Glock"
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
 	db := app.BuildDynamodbClient()
 	backend := app.DynamoBackend{
 		Db:    db,
-		Table: "Glock",
+		Table: tableName,
 	}
 	server := app.NewServer(&backend)
 
