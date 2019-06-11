@@ -119,3 +119,14 @@ need to pick up again.
 
 This might be a completely unnecessary addition, but it simplifies
 certain things. Dunno.
+
+
+## TODO
+
+* [ ] Tests
+* [ ] Better value checking around `value`s
+* [ ] Sweeper to clean up really old locks
+* [ ] Actual configuration via env vars
+* [ ] Actual production DynamoDB settings
+* [ ] Namespaces? Enforced lock name characters?
+* [ ] Customizable lease durations (per req)?
